@@ -1,22 +1,27 @@
 const connection = require('./connection')
 
-function getUser (id, db = connection) {
-  return db('users')
-    .where('id', id)
-    .select()
-    .first()
-    .then(result => {
-      return result
-    })
-}
-
-function editProfile (id, newProfile, db = connection) {
-  return db('users')
-    .where('id', id)
-    .update({ profile: newProfile })
-}
-
 module.exports = {
   getUser,
+  getUserById,
   editProfile
+}
+
+function getUser (authId, db = connection) {
+  return db('users')
+    .where('auth0_id', authId)
+    .first()
+    .select()
+}
+
+function getUserById (id, db = connection) {
+  return db('users')
+    .where('id', id)
+    .first()
+    .select()
+}
+
+function editProfile (authId, newProfile, db = connection) {
+  return db('users')
+    .where('auth0_id', authId)
+    .update({ profile: newProfile })
 }

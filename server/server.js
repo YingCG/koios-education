@@ -8,7 +8,7 @@ const subjects = require('./routes/subjects')
 const data = require('./routes/data')
 const myClass = require('./routes/myclass')
 
-require('dotenv').config({ path: path.join(__dirname, '../../server/.env') })
+require('dotenv').config({ path: path.join(__dirname, '.env') })
 const server = express()
 
 server.use(express.json())

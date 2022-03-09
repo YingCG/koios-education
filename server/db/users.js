@@ -6,19 +6,19 @@ module.exports = {
   createUser
 }
 
-function userExists (username, db = connection) {
+function userExists (authId, db = connection) {
   return db('users')
-    .count('id as n')
-    .where('username', username)
+    .count('auth0_Id as n')
+    .where('auth0_Id', authId)
     .then(count => {
       return count[0].n > 0
     })
 }
 
-function getUserByName (username, db = connection) {
+function getUserByName (authId, db = connection) {
   return db('users')
     .select()
-    .where('username', username)
+    .where('auth0_Id', authId)
     .first()
 }
 
