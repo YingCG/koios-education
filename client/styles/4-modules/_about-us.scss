@@ -1,0 +1,73 @@
+@use '../2-base/custom-mixins' as mixin;
+
+.aboutus__blurb{
+  margin: auto;
+  width: 85%;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+
+.founderCard {
+  width: 22%;
+  background-color: #e7fefa;
+  margin: 0.5rem;
+  border-radius: 0.8rem;
+  overflow-y: hidden;
+ 
+  h2, h4, p {
+    padding: 1rem;
+  }
+
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  box-shadow: [horizontal offset];
+  img {
+    margin: auto;
+    height: 280px;
+    object-fit: cover;
+    width: 100%;
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
+    filter: drop-shadow(.5rem .5rem 1rem rgb(255, 255, 255));
+
+  }
+  @include mixin.media-breakpoint(tiny) {
+    width: 95%
+  }
+  @include mixin.media-breakpoint(phone) {
+    width: 95%
+  }
+  @include mixin.media-breakpoint(tablet) {
+    width: 50%
+  }
+  @include mixin.media-breakpoint(desktop) {
+    width: 25%
+  }
+  @include mixin.media-breakpoint(television) {
+    width: 25%
+  }
+}
+
+
+.footer {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+
+.ourStory {
+  margin: auto;
+  width: 90%;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0.2rem 0.3rem 0 rgb(0, 0, 0, 0.2);
+  box-shadow: 0 0.2rem 0.3rem 0 rgba($color: #242424, $alpha: 0.2);
+  box-shadow: [horizontal offset];
+  border-radius: 5px;
+  h1 {
+    text-align: center;
+    
+  }
+}

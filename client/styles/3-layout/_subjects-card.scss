@@ -1,0 +1,113 @@
+@use '../2-base/custom-mixins' as mixin;
+
+
+.subject {
+
+
+
+    &__container {
+        margin: auto;
+        width: 90%;
+        background-color: rgba($color: #ccffe2, $alpha: 0.5);
+        min-height: 100vh;
+        max-height: auto;
+        padding-top: 1rem;
+    }
+
+
+    &__heading {
+        text-align:center;
+
+    }
+
+    &__item-container {
+
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+       
+
+    }
+
+
+    &__item-link {
+        border: 0.1rem solid rgba($color: #000000, $alpha: 0.3);
+        width: 45%;
+        height: 10rem;
+        margin: 1.5rem;
+        display: flex;
+        justify-content: flex-start;
+        padding: 0.2rem;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        background-color: rgba($color: #ffffff, $alpha: 0.9);
+        filter: drop-shadow(.5rem .5rem 1rem rgb(255, 255, 255));
+        opacity: 0.99;
+
+        &:hover {
+          opacity: 1;
+          transition: all 0.3s ease-in;
+          transform: scale(1.1);
+          transform-origin: bottom;
+        }
+        @include mixin.media-breakpoint(tiny) {
+            width: 95%;   
+        }
+        @include mixin.media-breakpoint(phone) {
+            width: 95%;   
+        }
+        @include mixin.media-breakpoint(tablet) {
+            width: 95%;   
+        }
+        @include mixin.media-breakpoint(desktop) {
+            width: 40%;   
+        }
+        @include mixin.media-breakpoint(television) {
+            width: 45%;   
+        }
+
+        img {
+            height: auto;
+            width: 30%;
+            height: 100%;
+            object-fit: cover;
+            @include mixin.media-breakpoint(tiny) {
+                width: 40%;   
+            }
+            padding: 0.2rem;
+            margin-right: 1rem;
+            border-radius: 0.5rem;
+
+
+            
+        }
+    }
+
+
+
+
+    &__text-container {
+        display: flex;
+        width: 30%;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 70%;
+
+        h3 {
+            margin-top: 0;
+                    
+        }  
+        
+        p {
+            margin-top: 0;
+            color: rgba(0,0,0, 0.8);
+                    
+        }
+
+    }
+
+ 
+
+}
+
+

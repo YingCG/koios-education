@@ -1,0 +1,107 @@
+@use '../2-base/custom-mixins' as mixin;
+
+
+.satellite-data {
+
+    &__heading {
+        text-align: center;
+    }
+
+    &__page-heading {
+        padding-top: 1rem;
+        text-align: center;
+    }
+    
+    &__page-data {
+        border-top: 0.1rem solid rgba($color: #000000, $alpha: 0.5);
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba($color: #fdfdfd, $alpha: 0.9);
+        padding: 2rem 0 0 0;
+        img {
+            width: 80%;
+            margin: 2rem 0;
+            box-shadow: 0 1rem 1rem 0 rgba($color: #242424, $alpha: 0.2);
+            border-left: 0.1rem solid rgba($color: #000000, $alpha: 0.3);
+
+        }
+    }
+
+    &__container {
+        margin: auto;
+        width: 90%;
+        background-color: rgba($color: #fdfdfd, $alpha: 0.9);
+        min-height: 100vh;
+        max-height: auto;
+        padding-top: 1rem;
+    }
+
+    
+    &__item-container {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+               
+    }
+
+
+    &__item-link {
+        text-decoration: none;
+        margin: 0.8rem 0;
+        background-color: rgba($color: #9bffd9, $alpha: 0.5);
+        width: 80%;
+        border-radius: 0.8rem;
+        &:hover {
+            border: 0.1rem solid rgba($color: #242424, $alpha: 0.2);
+            transition: all 0.3s ease-in;
+            transform: scale(1.1);
+            transform-origin: bottom;
+            box-shadow: 0 1rem 1rem 0.1rem rgba($color: #242424, $alpha: 0.2);
+        }
+
+        h2 {
+            text-align: center;
+        }       
+    }
+
+
+    &__data-container {
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+       
+    }
+
+
+    &__data-block {
+        width: 20%;
+        padding: 1rem;
+        margin: 1.5rem 1rem;
+        box-shadow: 0 1rem 1rem 0.1rem rgba($color: #242424, $alpha: 0.2);
+
+        span {
+            margin: 1rem 0;
+            padding: 0.1rem;
+            line-height: 2;
+            border-radius: 0.3rem;
+        }
+
+
+        
+    }
+
+    &__item-label {
+        background-color:  rgba($color: #6ee2ff, $alpha: 0.9);
+        margin: 0 0.8rem 0.8rem 0;
+        color: #fff;
+        
+    }
+
+
+
+    
+
+}

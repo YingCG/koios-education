@@ -1,0 +1,100 @@
+@use '../1-helpers/mixins';
+@use '../1-helpers/functions';
+@use '../1-helpers/vars';
+
+.form-box {
+  position: relative;
+  width: functions.colWidth(9);
+  height: 2rem;
+  background: #FFFFFF;
+  border: 1.5px solid #8ADB55;
+  box-sizing: border-box;
+  border-radius: 4px;
+  @include mixins.media-queries(mobile, min) {
+    width: functions.colWidth(12);
+  }
+}
+
+.form-title {
+  text-align: center;
+}
+
+.description-box {
+  @extend .form-box;
+  height: 150px;
+}
+
+.label {
+  position: relative;
+  width: functions.colWidth(9);
+  height:  2rem;
+  font-size: 16px;
+  line-height: 28px;
+  color: vars.$black;
+  font-weight: 500;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  @include mixins.media-queries(mobile, min) {
+    width: functions.colWidth(12);
+  }
+}
+
+.label.profile-label{
+  font-weight: 800;
+  text-align: left;
+  margin: 10px 10px auto;
+}
+
+
+.form-input {
+  height: vars.$base-size * 1.75; // or 100%?
+  width: functions.colWidth(9);
+  font-family: vars.$paragraph;
+  margin-bottom: vars.$base-size;
+  @include mixins.media-queries(mobile, min) {
+    width: functions.colWidth(12);
+  }
+}
+
+.form-textarea {
+  height: vars.$base-size * 8;
+  width: functions.colWidth(9);
+  margin-bottom: vars.$base-size;
+  @include mixins.media-queries(mobile, min) {
+    width: functions.colWidth(12);
+  }
+}
+
+
+.button-group{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+
+  button {
+  margin: 0.2rem;
+  align-content: center;
+  align-items: center;
+  min-width: 200px;
+  text-align: center;
+
+ @include mixins.media-queries(mobile, min) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 0.5rem;
+  }
+  }
+}
+
+.form-content{
+  margin-left: 1rem; 
+  margin-right: 1rem; 
+}

@@ -1,0 +1,78 @@
+@use "sass:math";
+@use '../1-helpers/mixins';
+@use '../1-helpers/functions';
+@use '../1-helpers/vars';
+
+.note {
+  display: flex;
+  height: 3rem;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.draggable {
+  width: 150px;
+  height: 150px;
+  background-color: vars.$secondary;
+  padding : 0.5rem;
+  font-weight: 600;
+  touch-action: 'none';
+  flex-direction: row;
+
+  p{
+    color: white;
+  }
+
+  a{
+  text-decoration: none;  }
+}
+
+.noteBtn{
+  border: none;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 15px;
+  padding: 0.3rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  background-color: white;
+  color: vars.$secondary;
+}
+
+.avatar {
+  width: 200px;
+  height: 200px;
+
+  &__img{
+    width: 200px;
+  height: 200px;
+  border-radius: 10rem;
+  }
+  
+}
+
+.classroom-container{
+  display: flex;
+	flex-flow: column;
+  height: 10rem;
+  flex-wrap: wrap;
+
+}
+
+.classroom-picture {
+  z-index: 1;
+  position: relative;
+}
+
+  .draggable-light {
+    &__img{
+      height: 1rem;
+      height: auto;
+    }
+  }
+
+  .stationery{
+    display: flex;
+    height: 1rem;
+  }
+

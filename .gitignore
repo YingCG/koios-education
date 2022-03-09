@@ -1,0 +1,7 @@
+node_modules
+bundle*
+dev.sqlite3
+coverage
+package-lock.json
+.log
+style.min.css*

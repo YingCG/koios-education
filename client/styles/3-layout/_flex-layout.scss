@@ -1,0 +1,44 @@
+@use '../1-helpers/mixins';
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  @include mixins.media-queries(mobile, min) {
+    flex-direction: row;
+  }
+}
+
+.flex-container.flex-garden {
+  justify-content: space-between;
+  width: 100%;
+}
+
+.flex-column {
+  flex-direction: column;
+
+  &-reverse {
+    flex-direction: column-reverse;
+  }
+}
+
+.flex-row {
+  flex-direction: row;
+
+  &-reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.centre-flex {
+  justify-content: center;
+}
+
+.margin-container {
+  margin: 2.5rem;
+}
+
+.home-flex {
+  @extend .flex-container;
+  height: 75vh;
+  align-items: center;
+}
