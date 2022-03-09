@@ -1,6 +1,9 @@
 const server = require('./server')
 
-const port = process.env.PORT || 3000
+let port = process.env.PORT
+if (port == null || port === '') {
+  port = 8000
+}
 
 // if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
 //   const envConfig = require('dotenv').config()
